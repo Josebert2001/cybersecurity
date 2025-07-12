@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,11 +9,10 @@ export const Navigation = () => {
   const navItems = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
-    { href: "#programs", label: "Programs" },
-    { href: "#labs", label: "Labs" },
-    { href: "#students", label: "Students" },
-    { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
+    { href: "#staffs", label: "Staffs" },
+    { href: "#courses", label: "Courses" },
+    { href: "#students", label: "Students" },
   ];
 
   return (
@@ -23,7 +21,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
             <Shield className="h-7 w-7 text-cyber-gold" />
-            <div className="text-lg font-semibold">
+            <div className="text-lg font-medium">
               <span className="text-cyber-gold">Cyber</span>
               <span className="text-foreground">Security</span>
             </div>
@@ -36,7 +34,7 @@ export const Navigation = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-muted-foreground hover:text-cyber-gold px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md hover:bg-muted/50"
+                  className="text-muted-foreground hover:text-cyber-gold px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md hover:bg-muted/30"
                 >
                   {item.label}
                 </a>
@@ -68,7 +66,7 @@ export const Navigation = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-muted-foreground hover:text-cyber-gold block px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md hover:bg-muted/50"
+                className="text-muted-foreground hover:text-cyber-gold block px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md hover:bg-muted/30"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
