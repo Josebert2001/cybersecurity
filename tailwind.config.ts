@@ -57,9 +57,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'cyber-green': 'hsl(var(--cyber-green))',
-				'cyber-blue': 'hsl(var(--cyber-blue))',
-				'terminal-green': 'hsl(var(--terminal-green))',
+				'cyber-navy': 'hsl(var(--cyber-navy))',
+				'cyber-cyan': 'hsl(var(--cyber-cyan))',
+				'cyber-emerald': 'hsl(var(--cyber-emerald))',
+				'cyber-slate': 'hsl(var(--cyber-slate))',
+				'cyber-light': 'hsl(var(--cyber-light))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

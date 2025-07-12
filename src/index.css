@@ -6,74 +6,78 @@
 @layer base {
   :root {
     /* Light mode colors */
-    --background: 0 0% 100%;
-    --foreground: 222 84% 4.9%;
+    --background: 210 20% 98%;
+    --foreground: 222 84% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
+    --card-foreground: 222 84% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 4.9%;
+    --popover-foreground: 222 84% 11%;
 
-    --primary: 142 76% 36%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 187 85% 53%;
+    --primary-foreground: 210 20% 98%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 84% 4.9%;
+    --secondary: 215 25% 96%;
+    --secondary-foreground: 222 84% 11%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 215 25% 96%;
+    --muted-foreground: 215 16% 65%;
 
-    --accent: 142 76% 36%;
-    --accent-foreground: 222 84% 4.9%;
+    --accent: 158 64% 40%;
+    --accent-foreground: 210 20% 98%;
 
-    --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 142 76% 36%;
+    --border: 215 25% 91%;
+    --input: 215 25% 91%;
+    --ring: 187 85% 53%;
 
     --radius: 0.5rem;
     
-    --cyber-green: 142 76% 36%;
-    --cyber-blue: 217 91% 60%;
-    --terminal-green: 120 100% 35%;
+    --cyber-navy: 222 84% 11%;
+    --cyber-cyan: 187 85% 53%;
+    --cyber-emerald: 158 64% 40%;
+    --cyber-slate: 215 16% 65%;
+    --cyber-light: 210 20% 96%;
   }
 
   .dark {
-    /* Dark mode colors */
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode colors - using your recommended cybersecurity palette */
+    --background: 222 84% 11%;
+    --foreground: 210 20% 96%;
 
-    --card: 222 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 222 84% 11%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 222 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 222 84% 11%;
+    --popover-foreground: 210 20% 96%;
 
-    --primary: 142 76% 36%;
-    --primary-foreground: 355 7% 97%;
+    --primary: 187 85% 53%;
+    --primary-foreground: 222 84% 11%;
 
-    --secondary: 217 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 32% 17%;
+    --secondary-foreground: 210 20% 96%;
 
-    --muted: 217 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 32% 17%;
+    --muted-foreground: 215 16% 65%;
 
-    --accent: 142 76% 36%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 158 64% 40%;
+    --accent-foreground: 210 20% 96%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 96%;
 
-    --border: 217 32.6% 17.5%;
-    --input: 217 32.6% 17.5%;
-    --ring: 142 76% 36%;
+    --border: 215 32% 17%;
+    --input: 215 32% 17%;
+    --ring: 187 85% 53%;
     
-    --cyber-green: 142 76% 36%;
-    --cyber-blue: 217 91% 60%;
-    --terminal-green: 120 100% 50%;
+    --cyber-navy: 222 84% 11%;
+    --cyber-cyan: 187 85% 53%;
+    --cyber-emerald: 158 64% 40%;
+    --cyber-slate: 215 16% 65%;
+    --cyber-light: 210 20% 96%;
   }
 }
 
@@ -99,18 +103,18 @@
   }
   
   .cyber-glow {
-    text-shadow: 0 0 10px hsl(var(--cyber-green));
+    text-shadow: 0 0 10px hsl(var(--cyber-cyan));
   }
   
   .terminal-text {
-    color: hsl(var(--terminal-green));
+    color: hsl(var(--cyber-emerald));
     font-family: 'JetBrains Mono', monospace;
   }
   
   .gradient-cyber {
     background: linear-gradient(135deg, 
-      hsl(var(--cyber-green)) 0%, 
-      hsl(var(--cyber-blue)) 100%);
+      hsl(var(--cyber-cyan)) 0%, 
+      hsl(var(--cyber-emerald)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -125,12 +129,12 @@
 
 @keyframes blink {
   0%, 50% { border-color: transparent; }
-  51%, 100% { border-color: hsl(var(--cyber-green)); }
+  51%, 100% { border-color: hsl(var(--cyber-cyan)); }
 }
 
 .typewriter {
   overflow: hidden;
-  border-right: 2px solid hsl(var(--cyber-green));
+  border-right: 2px solid hsl(var(--cyber-cyan));
   white-space: nowrap;
   animation: typewriter 3s steps(40, end), blink 1s step-end infinite;
 }
@@ -151,7 +155,7 @@
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px hsl(var(--cyber-green) / 0.3);
+  box-shadow: 0 0 20px hsl(var(--cyber-cyan) / 0.3);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
