@@ -17,7 +17,7 @@ export const HeroSection = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
             <span className="block text-foreground mb-2">Department of</span>
-            <span className="block gradient-cyber text-6xl md:text-8xl lg:text-9xl font-extrabold cyber-glow">
+            <span className="block gradient-cyber text-6xl md:text-8xl lg:text-9xl font-extrabold">
               CyberSecurity
             </span>
           </h1>
