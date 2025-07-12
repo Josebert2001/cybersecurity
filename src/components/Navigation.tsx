@@ -1,80 +1,112 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
-    { href: "#staffs", label: "Staffs" },
-    { href: "#courses", label: "Courses" },
+    { href: "#programs", label: "Programs" },
+    { href: "#labs", label: "Labs" },
     { href: "#students", label: "Students" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50 transition-colors duration-300">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-background/95 backdrop-blur-lg border-b border-border shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-3">
-            <Shield className="h-7 w-7 text-cyber-gold" />
-            <div className="text-lg font-medium">
+          {/* Logo with enhanced design */}
+          <div className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-cyber-gold/20 rounded-lg blur-md group-hover:blur-lg transition-all duration-300"></div>
+              <div className="relative p-2 rounded-lg bg-gradient-to-br from-cyber-gold/10 to-cyber-blue/10 border border-cyber-gold/20 backdrop-blur-sm">
+                <Shield className="h-8 w-8 text-cyber-gold" />
+              </div>
+            </div>
+            <div className="text-xl font-bold">
               <span className="text-cyber-gold">Cyber</span>
               <span className="text-foreground">Security</span>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation with enhanced styling */}
           <div className="hidden md:flex items-center space-x-1">
             <div className="flex items-baseline space-x-1">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-muted-foreground hover:text-cyber-gold px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md hover:bg-muted/30"
+                  className="relative group text-muted-foreground hover:text-cyber-gold px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-cyber-gold/10"
                 >
                   {item.label}
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyber-gold group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300"></span>
                 </a>
               ))}
             </div>
-            <ThemeToggle />
+            <div className="ml-4">
+              <ThemeToggle />
+            </div>
           </div>
 
-          {/* Mobile menu button and theme toggle */}
+          {/* Mobile menu button with enhanced design */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-muted-foreground hover:text-cyber-gold"
+              className="relative text-muted-foreground hover:text-cyber-gold hover:bg-cyber-gold/10 transition-all duration-300"
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              <div className="relative w-6 h-6">
+                <Menu className={`absolute inset-0 transition-all duration-300 ${isOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'}`} />
+                <X className={`absolute inset-0 transition-all duration-300 ${isOpen ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0'}`} />
+              </div>
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden border-t border-border">
-          <div className="px-4 py-2 space-y-1 bg-background/95 backdrop-blur-md">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-muted-foreground hover:text-cyber-gold block px-3 py-2 text-sm font-medium transition-colors duration-200 rounded-md hover:bg-muted/30"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+      {/* Enhanced Mobile Navigation */}
+      <div className={`md:hidden transition-all duration-500 ease-in-out ${
+        isOpen 
+          ? 'max-h-96 opacity-100' 
+          : 'max-h-0 opacity-0'
+      } overflow-hidden`}>
+        <div className="px-4 py-2 space-y-1 bg-background/95 backdrop-blur-lg border-t border-border">
+          {navItems.map((item, index) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="block text-muted-foreground hover:text-cyber-gold px-4 py-3 text-sm font-medium transition-all duration-300 rounded-lg hover:bg-cyber-gold/10 transform hover:translate-x-2"
+              onClick={() => setIsOpen(false)}
+              style={{ 
+                animationDelay: `${index * 50}ms`,
+                animation: isOpen ? 'slideInLeft 0.3s ease-out forwards' : 'none'
+              }}
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };
