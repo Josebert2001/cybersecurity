@@ -22,9 +22,9 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <Shield className="h-8 w-8 text-cyber-cyan" />
+            <Shield className="h-8 w-8 text-cyber-yellow" />
             <div className="text-xl font-bold">
-              <span className="text-cyber-cyan">Cyber</span>Security
+              <span className="text-cyber-yellow">Cyber</span>Security
             </div>
           </div>
 
@@ -35,7 +35,7 @@ export const Navigation = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-muted-foreground hover:text-cyber-cyan px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-muted-foreground hover:text-cyber-yellow px-3 py-2 text-sm font-medium transition-colors duration-200"
                 >
                   {item.label}
                 </a>
@@ -51,7 +51,7 @@ export const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-muted-foreground hover:text-cyber-cyan"
+              className="text-muted-foreground hover:text-cyber-yellow"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -67,7 +67,7 @@ export const Navigation = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-muted-foreground hover:text-cyber-cyan block px-3 py-2 text-base font-medium transition-colors duration-200"
+                className="text-muted-foreground hover:text-cyber-yellow block px-3 py-2 text-base font-medium transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

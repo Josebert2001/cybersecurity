@@ -6,78 +6,78 @@
 @layer base {
   :root {
     /* Light mode colors */
-    --background: 210 20% 98%;
-    --foreground: 222 84% 11%;
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 84% 11%;
+    --card-foreground: 222 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 11%;
+    --popover-foreground: 222 84% 4.9%;
 
-    --primary: 187 85% 53%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 45 96% 56%;
+    --primary-foreground: 222 84% 4.9%;
 
-    --secondary: 215 25% 96%;
-    --secondary-foreground: 222 84% 11%;
+    --secondary: 225 75% 33%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 215 25% 96%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 46.9%;
 
-    --accent: 158 64% 40%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 45 96% 56%;
+    --accent-foreground: 222 84% 4.9%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 20% 98%;
 
-    --border: 215 25% 91%;
-    --input: 215 25% 91%;
-    --ring: 187 85% 53%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 45 96% 56%;
 
     --radius: 0.5rem;
     
-    --cyber-navy: 222 84% 11%;
-    --cyber-cyan: 187 85% 53%;
-    --cyber-emerald: 158 64% 40%;
-    --cyber-slate: 215 16% 65%;
-    --cyber-light: 210 20% 96%;
+    --cyber-black: 0 0% 0%;
+    --cyber-yellow: 45 96% 56%;
+    --cyber-blue: 225 75% 33%;
+    --cyber-slate: 215 16% 46.9%;
+    --cyber-light: 210 20% 98%;
   }
 
   .dark {
-    /* Dark mode colors - using your recommended cybersecurity palette */
-    --background: 222 84% 11%;
-    --foreground: 210 20% 96%;
+    /* Dark mode colors - using yellow, deep blue, and black */
+    --background: 0 0% 0%;
+    --foreground: 210 20% 98%;
 
-    --card: 222 84% 11%;
-    --card-foreground: 210 20% 96%;
+    --card: 0 0% 7%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 222 84% 11%;
-    --popover-foreground: 210 20% 96%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 210 20% 98%;
 
-    --primary: 187 85% 53%;
-    --primary-foreground: 222 84% 11%;
+    --primary: 45 96% 56%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 215 32% 17%;
-    --secondary-foreground: 210 20% 96%;
+    --secondary: 225 75% 33%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 215 32% 17%;
-    --muted-foreground: 215 16% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 215 20% 46%;
 
-    --accent: 158 64% 40%;
-    --accent-foreground: 210 20% 96%;
+    --accent: 45 96% 56%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 96%;
+    --destructive-foreground: 210 20% 98%;
 
-    --border: 215 32% 17%;
-    --input: 215 32% 17%;
-    --ring: 187 85% 53%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 45 96% 56%;
     
-    --cyber-navy: 222 84% 11%;
-    --cyber-cyan: 187 85% 53%;
-    --cyber-emerald: 158 64% 40%;
-    --cyber-slate: 215 16% 65%;
-    --cyber-light: 210 20% 96%;
+    --cyber-black: 0 0% 0%;
+    --cyber-yellow: 45 96% 56%;
+    --cyber-blue: 225 75% 33%;
+    --cyber-slate: 215 20% 46%;
+    --cyber-light: 210 20% 98%;
   }
 }
 
@@ -102,19 +102,15 @@
     text-wrap: balance;
   }
   
-  .cyber-glow {
-    text-shadow: 0 0 10px hsl(var(--cyber-cyan));
-  }
-  
   .terminal-text {
-    color: hsl(var(--cyber-emerald));
+    color: hsl(var(--cyber-yellow));
     font-family: 'JetBrains Mono', monospace;
   }
   
   .gradient-cyber {
     background: linear-gradient(135deg, 
-      hsl(var(--cyber-cyan)) 0%, 
-      hsl(var(--cyber-emerald)) 100%);
+      hsl(var(--cyber-yellow)) 0%, 
+      hsl(var(--cyber-blue)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -129,12 +125,12 @@
 
 @keyframes blink {
   0%, 50% { border-color: transparent; }
-  51%, 100% { border-color: hsl(var(--cyber-cyan)); }
+  51%, 100% { border-color: hsl(var(--cyber-yellow)); }
 }
 
 .typewriter {
   overflow: hidden;
-  border-right: 2px solid hsl(var(--cyber-cyan));
+  border-right: 2px solid hsl(var(--cyber-yellow));
   white-space: nowrap;
   animation: typewriter 3s steps(40, end), blink 1s step-end infinite;
 }
@@ -155,7 +151,7 @@
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px hsl(var(--cyber-cyan) / 0.3);
+  box-shadow: 0 0 20px hsl(var(--cyber-yellow) / 0.3);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }

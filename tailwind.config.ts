@@ -57,9 +57,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'cyber-navy': 'hsl(var(--cyber-navy))',
-				'cyber-cyan': 'hsl(var(--cyber-cyan))',
-				'cyber-emerald': 'hsl(var(--cyber-emerald))',
+				'cyber-black': 'hsl(var(--cyber-black))',
+				'cyber-yellow': 'hsl(var(--cyber-yellow))',
+				'cyber-blue': 'hsl(var(--cyber-blue))',
 				'cyber-slate': 'hsl(var(--cyber-slate))',
 				'cyber-light': 'hsl(var(--cyber-light))',
 			},

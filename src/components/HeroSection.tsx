@@ -10,9 +10,9 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <div className="flex justify-center space-x-4 mb-8">
-            <Shield className="h-16 w-16 text-cyber-cyan animate-pulse" />
-            <Lock className="h-16 w-16 text-cyber-emerald animate-pulse delay-300" />
-            <Globe className="h-16 w-16 text-cyber-cyan animate-pulse delay-600" />
+            <Shield className="h-16 w-16 text-cyber-yellow animate-pulse" />
+            <Lock className="h-16 w-16 text-cyber-blue animate-pulse delay-300" />
+            <Globe className="h-16 w-16 text-cyber-yellow animate-pulse delay-600" />
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -36,21 +36,21 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button 
               size="lg" 
-              className="bg-cyber-cyan hover:bg-cyber-cyan/80 text-cyber-navy px-8 py-3 text-lg font-semibold hover-glow transition-all duration-300"
+              className="bg-cyber-yellow hover:bg-cyber-yellow/80 text-cyber-black px-8 py-3 text-lg font-semibold hover-glow transition-all duration-300"
             >
               Explore Programs
             </Button>
             <Button 
               variant="outline" 
               size="lg"
-              className="border-cyber-emerald text-cyber-emerald hover:bg-cyber-emerald hover:text-cyber-navy px-8 py-3 text-lg font-semibold transition-all duration-300"
+              className="border-cyber-blue text-cyber-blue hover:bg-cyber-blue hover:text-cyber-light px-8 py-3 text-lg font-semibold transition-all duration-300"
             >
               Virtual Tour
             </Button>
           </div>
           
           <div className="pt-12">
-            <ChevronDown className="h-8 w-8 text-cyber-cyan mx-auto animate-bounce" />
+            <ChevronDown className="h-8 w-8 text-cyber-yellow mx-auto animate-bounce" />
           </div>
         </div>
       </div>
