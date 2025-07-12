@@ -15,8 +15,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 84% 4.9%;
 
-    --primary: 45 96% 56%;
-    --primary-foreground: 222 84% 4.9%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 225 75% 33%;
     --secondary-foreground: 210 20% 98%;
@@ -24,59 +24,59 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 46.9%;
 
-    --accent: 45 96% 56%;
-    --accent-foreground: 222 84% 4.9%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 20% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 45 96% 56%;
+    --ring: 43 74% 49%;
 
     --radius: 0.5rem;
     
     --cyber-black: 0 0% 0%;
-    --cyber-yellow: 45 96% 56%;
+    --cyber-gold: 43 74% 49%;
     --cyber-blue: 225 75% 33%;
     --cyber-slate: 215 16% 46.9%;
     --cyber-light: 210 20% 98%;
   }
 
   .dark {
-    /* Dark mode colors - using yellow, deep blue, and black */
+    /* Dark mode colors - using gold, deep blue, and black */
     --background: 0 0% 0%;
     --foreground: 210 20% 98%;
 
-    --card: 0 0% 7%;
+    --card: 0 0% 5%;
     --card-foreground: 210 20% 98%;
 
-    --popover: 0 0% 7%;
+    --popover: 0 0% 5%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 45 96% 56%;
+    --primary: 43 74% 49%;
     --primary-foreground: 0 0% 0%;
 
     --secondary: 225 75% 33%;
     --secondary-foreground: 210 20% 98%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 215 20% 46%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 215 20% 50%;
 
-    --accent: 45 96% 56%;
+    --accent: 43 74% 49%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 20% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 45 96% 56%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 43 74% 49%;
     
     --cyber-black: 0 0% 0%;
-    --cyber-yellow: 45 96% 56%;
+    --cyber-gold: 43 74% 49%;
     --cyber-blue: 225 75% 33%;
-    --cyber-slate: 215 20% 46%;
+    --cyber-slate: 215 20% 50%;
     --cyber-light: 210 20% 98%;
   }
 }
@@ -103,13 +103,13 @@
   }
   
   .terminal-text {
-    color: hsl(var(--cyber-yellow));
+    color: hsl(var(--cyber-gold));
     font-family: 'JetBrains Mono', monospace;
   }
   
   .gradient-cyber {
     background: linear-gradient(135deg, 
-      hsl(var(--cyber-yellow)) 0%, 
+      hsl(var(--cyber-gold)) 0%, 
       hsl(var(--cyber-blue)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -117,32 +117,11 @@
   }
 }
 
-/* Custom animations */
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  0%, 50% { border-color: transparent; }
-  51%, 100% { border-color: hsl(var(--cyber-yellow)); }
-}
-
-.typewriter {
-  overflow: hidden;
-  border-right: 2px solid hsl(var(--cyber-yellow));
-  white-space: nowrap;
-  animation: typewriter 3s steps(40, end), blink 1s step-end infinite;
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
+/* Simplified animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -150,8 +129,6 @@
   }
 }
 
-.hover-glow:hover {
-  box-shadow: 0 0 20px hsl(var(--cyber-yellow) / 0.3);
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
