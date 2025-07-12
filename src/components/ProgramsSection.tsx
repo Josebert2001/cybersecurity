@@ -1,5 +1,5 @@
 
-import { GraduationCap, BookOpen, Certificate, Trophy } from "lucide-react";
+import { GraduationCap, BookOpen, Award, Trophy } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -22,7 +22,7 @@ export const ProgramsSection = () => {
       highlights: ["AI Security", "Blockchain", "IoT Protection", "Threat Intelligence"]
     },
     {
-      icon: Certificate,
+      icon: Award,
       title: "Professional Certifications",
       duration: "Varies",
       level: "Professional",
