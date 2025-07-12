@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-background via-background to-secondary/20">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgo8cGF0aCBkPSJNIDEwIDAgTCAwIDAgMCAxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9wYXR0ZXJuPgo8L2RlZnM+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiIC8+Cjwvc3ZnPg==')] opacity-10"></div>
+    <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-background via-background to-secondary/20 transition-colors duration-300">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgo8cGF0aCBkPSJNIDEwIDAgTCAwIDAgMCAxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJoc2woMjE3IDMyLjYlIDE3LjUlKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwvcGF0dGVybj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPgo8L3N2Zz4=')] opacity-10 dark:opacity-20"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
@@ -36,14 +36,14 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button 
               size="lg" 
-              className="bg-cyber-green hover:bg-cyber-green/80 text-white px-8 py-3 text-lg font-semibold hover-glow"
+              className="bg-cyber-green hover:bg-cyber-green/80 text-white px-8 py-3 text-lg font-semibold hover-glow transition-all duration-300"
             >
               Explore Programs
             </Button>
             <Button 
               variant="outline" 
               size="lg"
-              className="border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-white px-8 py-3 text-lg font-semibold"
+              className="border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-white px-8 py-3 text-lg font-semibold transition-all duration-300"
             >
               Virtual Tour
             </Button>

@@ -5,61 +5,75 @@
 
 @layer base {
   :root {
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Light mode colors */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
 
-    --card: 222 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
 
-    --popover: 222 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
 
     --primary: 142 76% 36%;
-    --primary-foreground: 355 7% 97%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 217 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 84% 4.9%;
 
-    --muted: 217 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
     --accent: 142 76% 36%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 222 84% 4.9%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 32.6% 17.5%;
-    --input: 217 32.6% 17.5%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
     --ring: 142 76% 36%;
 
     --radius: 0.5rem;
     
     --cyber-green: 142 76% 36%;
     --cyber-blue: 217 91% 60%;
-    --terminal-green: 120 100% 50%;
+    --terminal-green: 120 100% 35%;
   }
 
   .dark {
+    /* Dark mode colors */
     --background: 222 84% 4.9%;
     --foreground: 210 40% 98%;
+
     --card: 222 84% 4.9%;
     --card-foreground: 210 40% 98%;
+
     --popover: 222 84% 4.9%;
     --popover-foreground: 210 40% 98%;
+
     --primary: 142 76% 36%;
     --primary-foreground: 355 7% 97%;
+
     --secondary: 217 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
+
     --muted: 217 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
+
     --accent: 142 76% 36%;
     --accent-foreground: 210 40% 98%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+
     --border: 217 32.6% 17.5%;
     --input: 217 32.6% 17.5%;
     --ring: 142 76% 36%;
+    
+    --cyber-green: 142 76% 36%;
+    --cyber-blue: 217 91% 60%;
+    --terminal-green: 120 100% 50%;
   }
 }
 
@@ -71,6 +85,7 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   .font-mono {
