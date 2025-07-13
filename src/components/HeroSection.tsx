@@ -1,5 +1,7 @@
 import { Shield, ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { UniversityLogo } from "./UniversityLogo";
+
 export const HeroSection = () => {
   return <section id="home" className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-background via-background to-muted/20 overflow-hidden">
       {/* Animated background elements */}
@@ -11,12 +13,9 @@ export const HeroSection = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto space-y-12 fade-in-up">
-          {/* Logo with enhanced animation */}
+          {/* University Logo */}
           <div className="flex justify-center mb-8">
-            <div className="relative group">
-              <div className="absolute inset-0 bg-cyber-gold/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              
-            </div>
+            <UniversityLogo />
           </div>
           
           {/* Enhanced typography */}
