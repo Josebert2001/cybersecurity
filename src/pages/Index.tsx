@@ -2,10 +2,10 @@
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
-import { ProgramsSection } from "@/components/ProgramsSection";
-import { LabsSection } from "@/components/LabsSection";
+import { ContactSection } from "@/components/ContactSection";
+import { StaffsSection } from "@/components/StaffsSection";
+import { CoursesSection } from "@/components/CoursesSection";
 import { StudentsSection } from "@/components/StudentsSection";
-import { ProjectsSection } from "@/components/ProjectsSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -14,10 +14,10 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <ProgramsSection />
-      <LabsSection />
+      <ContactSection />
+      <StaffsSection />
+      <CoursesSection />
       <StudentsSection />
-      <ProjectsSection />
       <Footer />
     </div>
   );
