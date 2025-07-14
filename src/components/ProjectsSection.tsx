@@ -14,36 +14,6 @@ export const ProjectsSection = () => {
       status: "Completed",
       github: "#",
       demo: "#"
-    },
-    {
-      title: "AI-Powered Malware Detection",
-      description: "Machine learning system for real-time malware detection using behavioral analysis and neural network classification.",
-      technologies: ["Python", "TensorFlow", "Scikit-learn", "Docker"],
-      type: "Research Project",
-      team: "4 Students",
-      status: "Ongoing",
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Blockchain Security Framework",
-      description: "Comprehensive security framework for blockchain applications, including smart contract auditing tools and vulnerability scanners.",
-      technologies: ["Solidity", "Web3.js", "Truffle", "Mythril"],
-      type: "Final Year Project",
-      team: "5 Students",
-      status: "Completed",
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "IoT Security Monitor",
-      description: "Real-time monitoring system for IoT device security, featuring anomaly detection and automated threat response capabilities.",
-      technologies: ["Python", "MQTT", "InfluxDB", "Grafana"],
-      type: "Research Project",
-      team: "3 Students",
-      status: "Ongoing",
-      github: "#",
-      demo: "#"
     }
   ];
 
