@@ -57,18 +57,14 @@ export const HeroSection = () => {
           </div>
           
           {/* Stats preview with improved mobile layout */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 pt-12 md:pt-16 max-w-2xl mx-auto px-4 sm:px-0">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 pt-12 md:pt-16 max-w-2xl mx-auto px-4 sm:px-0">
             <div className="text-center group">
-              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-cyber-gold mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-cyber-gold mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">180+</div>
               <div className="text-xs sm:text-sm text-muted-foreground">Students</div>
             </div>
             <div className="text-center group">
-              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-cyber-gold mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Employment</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-cyber-gold mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Partnerships</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-cyber-gold mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300">1</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Project</div>
             </div>
           </div>
         </div>
