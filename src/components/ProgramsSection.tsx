@@ -1,4 +1,4 @@
-import { GraduationCap, BookOpen, Award, Clock, Users, Star } from "lucide-react";
+import { GraduationCap, BookOpen, Award, Clock, Users, Star, CheckCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,37 +7,42 @@ export const ProgramsSection = () => {
   const programs = [
     {
       icon: GraduationCap,
-      title: "B.Sc. Cybersecurity",
+      title: "4 Year B.Sc. Program",
       duration: "4 Years",
       level: "Undergraduate",
-      students: "300+",
-      rating: "4.9",
-      description: "Comprehensive program covering network security, ethical hacking, digital forensics, and incident response with hands-on laboratory experience.",
-      highlights: ["Ethical Hacking", "Digital Forensics", "Network Security", "Incident Response"],
+      requirements: "UTME + O'Level",
+      description: "For UTME candidates with five SSC-credit passes including English Language, Mathematics, Physics and other relevant Science subjects in not more than two sittings.",
+      highlights: [
+        "English Language",
+        "Mathematics",
+        "Physics",
+        "Science Subjects"
+      ],
       color: "from-cyber-gold/20 to-cyber-gold/5"
     },
     {
       icon: BookOpen,
-      title: "Research Programs",
-      duration: "Ongoing",
-      level: "All Levels",
-      students: "150+",
-      rating: "4.8",
-      description: "Active research in AI security, blockchain technology, IoT security, and emerging cybersecurity threats with industry partnerships.",
-      highlights: ["AI Security", "Blockchain", "IoT Protection", "Threat Intelligence"],
+      title: "3 Year B.Sc. Program",
+      duration: "3 Years",
+      level: "Direct Entry",
+      requirements: "Direct Entry",
+      description: "For candidates with University/National Diploma or NCE with five SSC credit passes in relevant Science subjects including English Language, Mathematics, Physics.",
+      highlights: [
+        "University Diploma",
+        "National Diploma",
+        "NCE",
+        "O'Level Credits"
+      ],
       color: "from-cyber-blue/20 to-cyber-blue/5"
-    },
-    {
-      icon: Award,
-      title: "Certifications",
-      duration: "Varies",
-      level: "Professional",
-      students: "200+",
-      rating: "4.9",
-      description: "Industry certification preparation including CISSP, CEH, OSCP, and CompTIA Security+ with expert-led training sessions.",
-      highlights: ["CISSP Prep", "CEH Training", "OSCP Labs", "CompTIA Security+"],
-      color: "from-purple-500/20 to-purple-500/5"
     }
+  ];
+
+  const objectives = [
+    "Detect and prevent cyber-fraud through foundational knowledge and skills",
+    "Analyze cybersecurity threats and develop detective codes",
+    "Master cryptography and digital forensic techniques",
+    "Develop critical thinking for cyber intelligence security",
+    "Prepare for cybersecurity careers and self-employment"
   ];
 
   return (
@@ -52,18 +57,19 @@ export const ProgramsSection = () => {
         <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-18 md:mb-20">
           <div className="inline-flex items-center space-x-2 bg-cyber-blue/10 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6">
             <GraduationCap className="h-4 w-4 sm:h-5 sm:w-5 text-cyber-blue" />
-            <span className="text-cyber-blue font-medium text-xs sm:text-sm">Academic Excellence</span>
+            <span className="text-cyber-blue font-medium text-xs sm:text-sm">Program Objectives</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8">
             Academic <span className="gradient-cyber">Programs</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed px-4 sm:px-0">
-            Comprehensive cybersecurity education designed to meet industry demands 
-            and prepare students for successful careers in digital security.
+            Our program equips students with comprehensive knowledge and skills to address 
+            the growing challenges in cybersecurity.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Program Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-16">
           {programs.map((program, index) => (
             <Card key={index} className="group border-0 bg-card/50 backdrop-blur-sm h-full hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden">
               {/* Card header with gradient */}
@@ -80,72 +86,47 @@ export const ProgramsSection = () => {
                   </div>
                   <CardTitle className="text-lg sm:text-xl md:text-2xl text-white mb-2">{program.title}</CardTitle>
                   
-                  {/* Program stats with better mobile layout */}
+                  {/* Program stats */}
                   <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-white/80 text-xs sm:text-sm">
                     <div className="flex items-center space-x-1">
                       <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
                       <span>{program.duration}</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Users className="h-3 w-3 sm:h-4 sm:w-4" />
-                      <span>{program.students}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Star className="h-3 w-3 sm:h-4 sm:w-4 fill-current" />
-                      <span>{program.rating}</span>
+                      <Award className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span>{program.requirements}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <CardContent className="p-4 sm:p-6 flex-1 flex flex-col">
-                <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed flex-1">
+              {/* Card content */}
+              <CardContent className="p-4 sm:p-6">
+                <p className="text-sm sm:text-base text-muted-foreground mb-4">
                   {program.description}
                 </p>
-                
-                {/* Highlights with better mobile spacing */}
-                <div className="space-y-3 sm:space-y-4">
-                  <h4 className="font-semibold text-sm text-foreground">Key Areas:</h4>
-                  <div className="flex flex-wrap gap-1 sm:gap-2">
-                    {program.highlights.map((highlight, idx) => (
-                      <Badge 
-                        key={idx} 
-                        variant="secondary" 
-                        className="text-xs px-2 sm:px-3 py-1 bg-muted/50 hover:bg-muted transition-colors duration-200"
-                      >
-                        {highlight}
-                      </Badge>
-                    ))}
-                  </div>
-                  
-                  {/* CTA Button */}
-                  <Button 
-                    className="w-full mt-4 sm:mt-6 bg-gradient-to-r from-cyber-gold to-cyber-gold/80 hover:from-cyber-gold/90 hover:to-cyber-gold text-black border-0 font-semibold group-hover:shadow-lg transition-all duration-300 text-sm sm:text-base"
-                  >
-                    Learn More
-                  </Button>
+                <div className="flex flex-wrap gap-2">
+                  {program.highlights.map((highlight, idx) => (
+                    <Badge key={idx} variant="secondary" className="text-xs">
+                      {highlight}
+                    </Badge>
+                  ))}
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Call to action with better mobile layout */}
-        <div className="text-center mt-12 sm:mt-14 md:mt-16">
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
-            <Button 
-              size="lg"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gradient-to-r from-cyber-blue to-cyber-blue/80 hover:from-cyber-blue/90 hover:to-cyber-blue text-white border-0 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base"
-            >
-              Apply Now
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-cyber-gold/50 text-cyber-gold hover:bg-cyber-gold hover:text-black transition-all duration-300 text-sm sm:text-base"
-            >
-              Download Brochure
-            </Button>
+        {/* Objectives Section */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-center">Program Objectives</h3>
+          <div className="grid gap-4">
+            {objectives.map((objective, index) => (
+              <div key={index} className="flex items-start space-x-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm">
+                <CheckCircle className="h-5 w-5 text-cyber-gold flex-shrink-0 mt-0.5" />
+                <p className="text-sm sm:text-base text-muted-foreground">{objective}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
